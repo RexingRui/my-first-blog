@@ -1,0 +1,173 @@
+/*页面布局*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	padding: 10px;
+	background-color: #f1f1f1;
+	padding-top: 0;
+	margin: 0;
+	background-image: url('bodyBackground.gif');
+}
+/*导航页渲染*/
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	margin: 0px;
+}
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+#brand {padding:0px;}
+#nav-brand-img {
+	float: left;
+	margin-top: 10px;
+	margin-left: 300px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn{
+	float: left;
+	width: 75%
+}
+
+/* Right column*/
+.rightcolumn{
+	float: left;
+	width: 25%;
+	padding-left: 20px;
+}
+
+/* Fake image*/
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/* Add a caro effect for articles*/
+.card {
+	padding: 20px;
+	margin-top: 20px;	
+}
+
+/* Clear floats after the columns */
+.row::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+/*轮播渲染*/
+.mySlides  {
+	display: none;
+
+}
+
+.imgShow {
+	display: block;
+	overflow: hidden;
+	height: 350px;
+	width: 1000px;
+}
+
+
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	left: 50px;
+	top: 280px;
+
+}
+
+.next {
+	border-radius: 3px 0 0 3px;
+	left:950px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.img-caption {
+	color: #f2f2f2;
+	font-size: 15px;
+	position: absolute;
+	right: 500px;
+	left: 500px;
+	top: 380px;
+
+}
+
+.slidedot {
+	text-align:center;
+	position: absolute;
+	left: 850px;
+	top: 400px;
+}
+
+span.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/*Fading animation*/
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration:1.5;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade{
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px){
+	.prev, .next, .img-caption{font-size: 11px;}
+}
